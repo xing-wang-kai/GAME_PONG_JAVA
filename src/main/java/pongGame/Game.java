@@ -26,7 +26,9 @@ public class Game extends Canvas implements Runnable, KeyListener
 	
 	private BufferedImage GameImage;
 	
-	public Player player;
+	public static Player player;
+	public static Enimy enimy;
+	public static PongBall pongBall;
 	
 	
 	public Game() 
@@ -36,7 +38,9 @@ public class Game extends Canvas implements Runnable, KeyListener
 		this.setPreferredSize(new Dimension(Game.WIDTH*Game.SCALE, Game.HEIGHT*Game.SCALE));
 		this.setJFrameConfigure();
 		
-		this.player = new Player(100, (Game.HEIGHT*Game.SCALE)-40);
+		this.player = new Player( ((Game.WIDTH*Game.SCALE)/2), (Game.HEIGHT*Game.SCALE)-40);
+		this.enimy = new Enimy( ((Game.WIDTH*Game.SCALE)/2), 20);
+		this.pongBall = new PongBall( ((Game.WIDTH*Game.SCALE)/2), ((Game.HEIGHT*Game.SCALE)/2));
 	}
 	
 	public static void main(String[] args)
@@ -61,6 +65,8 @@ public class Game extends Canvas implements Runnable, KeyListener
 	public void Update()
 	{
 		this.player.Update();
+		this.enimy.Update();
+		this.pongBall.Update();
 	}
 	
 	public void Render()
@@ -76,10 +82,13 @@ public class Game extends Canvas implements Runnable, KeyListener
 		graph.setColor(new Color(200, 0, 200));
 		graph.fillRect(0, 0, Game.WIDTH*Game.SCALE, Game.HEIGHT*Game.SCALE);
 		
+		graph.dispose();
 		graph = bs.getDrawGraphics();
 		graph.drawImage(this.GameImage, 0, 0, Game.WIDTH*Game.SCALE, Game.HEIGHT*Game.SCALE, null);
 		
 		this.player.Render(graph);
+		this.enimy.Render(graph);
+		this.pongBall.Render(graph);
 		
 		bs.show();
 		
@@ -162,7 +171,5 @@ public class Game extends Canvas implements Runnable, KeyListener
 			this.player.left = false;
 			this.player.right = false;
 		}
-		
 	}
-
 }

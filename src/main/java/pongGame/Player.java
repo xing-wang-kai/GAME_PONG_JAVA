@@ -8,8 +8,8 @@ public class Player {
 	public boolean right, left;
 	public int x, y;
 	
-	private final int WIDTH = 160;
-	private final int HIGHT = 20;
+	public final int WIDTH = 160;
+	public final int HEIGHT = 20;
 	
 	public Player(int x, int y)
 	{
@@ -31,14 +31,14 @@ public class Player {
 		{
 			this.x = (Game.WIDTH*Game.SCALE) - this.WIDTH;
 		}
-		else if( x < 0)
+		else if( this.x < 0)
 		{
-			x = 0;
+			this.x = 0;
 		}		
 	}
 	public void Render( Graphics graph)
 	{
-		graph.setColor(new Color(100, 255, 100));
-		graph.fillRect(x, y, this.WIDTH, this.HIGHT);
+		graph.setColor(new Color(0, 255, 255));
+		graph.fillRect(this.x, this.y, this.WIDTH, this.HEIGHT);
 	}
 }

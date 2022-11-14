@@ -28,11 +28,8 @@ public class PongBall {
 		this.x += this.directionX * this.speed;
 		this.y += this.directionY * this.speed;
 		
-		if(this.x + (this.directionX*this.speed) + this.WIDTH > Game.WIDTH*Game.SCALE )
-		{
-			this.directionX*=-1;
-		}
-		else if(this.x + (this.directionX*this.speed) <= 0)
+		if(this.x + (this.directionX*this.speed) + this.WIDTH > Game.WIDTH*Game.SCALE
+				|| this.x + (this.directionX*this.speed) <= 0)
 		{
 			this.directionX*=-1;
 		}

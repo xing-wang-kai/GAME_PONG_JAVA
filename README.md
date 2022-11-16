@@ -1,5 +1,7 @@
 # Game Pong com Java
 
+<img src="./src/main/resources/print001.png" />
+
 ###  Aula de desenvolvimento de game com Java sem GAME ENGINIE
 
 Nesta aula de desenvolvimento de Game com Java pela Danki CODE o foco foi a estrutura básica para o desnvolvimento 
@@ -30,4 +32,3 @@ mesma segue eixos aleatórios, e se movimenta conforme o Eixo gerado.
 Para Mover o Player foram pegados Eventos de teclado, neste caso os botões da esquerda para direita que movimentam 
 o objeto.
 
-<img src="./src/main/resources/print001.png" />

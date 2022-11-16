@@ -7,7 +7,6 @@ public class Player {
 
 	public boolean right, left;
 	public int x, y;
-	public int velocity = 3;
 	
 	public final int WIDTH = 160;
 	public final int HEIGHT = 20;

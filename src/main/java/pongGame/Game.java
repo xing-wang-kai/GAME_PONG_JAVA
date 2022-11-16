@@ -38,9 +38,9 @@ public class Game extends Canvas implements Runnable, KeyListener
 		this.setPreferredSize(new Dimension(Game.WIDTH*Game.SCALE, Game.HEIGHT*Game.SCALE));
 		this.setJFrameConfigure();
 		
-		this.player = new Player( ((Game.WIDTH*Game.SCALE)/2), (Game.HEIGHT*Game.SCALE)-40);
-		this.enimy = new Enimy( ((Game.WIDTH*Game.SCALE)/2), 20);
-		this.pongBall = new PongBall( ((Game.WIDTH*Game.SCALE)/2), ((Game.HEIGHT*Game.SCALE)/2));
+		Game.player = new Player( ((Game.WIDTH*Game.SCALE)/2), (Game.HEIGHT*Game.SCALE)-40);
+		Game.enimy = new Enimy( ((Game.WIDTH*Game.SCALE)/2), 20);
+		Game.pongBall = new PongBall( ((Game.WIDTH*Game.SCALE)/2), ((Game.HEIGHT*Game.SCALE)/2));
 	}
 	
 	public static void main(String[] args)
@@ -64,9 +64,9 @@ public class Game extends Canvas implements Runnable, KeyListener
 	
 	public void Update()
 	{
-		this.player.Update();
-		this.enimy.Update();
-		this.pongBall.Update();
+		Game.player.Update();
+		Game.enimy.Update();
+		Game.pongBall.Update();
 	}
 	
 	public void Render()

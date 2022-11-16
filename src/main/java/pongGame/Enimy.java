@@ -17,12 +17,11 @@ public class Enimy {
 	
 	public void Update()
 	{
+		this.x += (Game.pongBall.x - this.x)  * 0.07;
 		
-		this.x += Game.pongBall.x - this.x;
-		
-		if((this.x+this.WIDTH) >= Game.WIDTH*Game.SCALE)
+		if((this.x + this.WIDTH) >= Game.WIDTH*Game.SCALE)
 		{
-			this.x = (Game.WIDTH*Game.SCALE) - this.WIDTH;
+			this.x = (Game.WIDTH * Game.SCALE) - this.WIDTH;
 		}
 		else if( this.x <= 0)
 		{

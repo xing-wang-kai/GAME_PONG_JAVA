@@ -29,3 +29,5 @@ mesma segue eixos aleatórios, e se movimenta conforme o Eixo gerado.
 
 Para Mover o Player foram pegados Eventos de teclado, neste caso os botões da esquerda para direita que movimentam 
 o objeto.
+
+<img src="./src/main/resources/print001.png" />
